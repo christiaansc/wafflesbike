@@ -22,8 +22,8 @@ class CreateComprasTable extends Migration
 
             $table->enum('stado',['VALIDO','CANCELADO'])->default('VALIDO');
 
-            $table->unsignedBigInteger('proveedor_id');
-            $table->foreign('proveedor_id')->references('id')->on('provers');
+            $table->unsignedBigInteger('prover_id');
+            $table->foreign('prover_id')->references('id')->on('provers');
 
             $table->unsignedBigInteger('user_id');
             $table->foreign('user_id')->references('id')->on('users');
