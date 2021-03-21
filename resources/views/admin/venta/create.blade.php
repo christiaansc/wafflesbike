@@ -31,7 +31,7 @@
         <nav aria-label="breadcrumb">
             <ol class="breadcrumb">
                 <li class="breadcrumb-item"><a href="#">Panel administrador</a></li>
-                <li class="breadcrumb-item"><a href="{{route('compras.index')}}">Ventas</a></li>
+                <li class="breadcrumb-item"><a href="{{route('ventas.index')}}">Ventas</a></li>
                 <li class="breadcrumb-item active" aria-current="page">Registro de venta</li>
             </ol>
         </nav>
