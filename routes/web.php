@@ -30,7 +30,7 @@ Route::post('ventas/report_results', 'ReportController@report_results')->name('r
 Route::resource('categorias', 'CategoriaController')->names('categorias');
 Route::resource('provers', 'ProverController')->names('provers');
 Route::resource('waffles', 'WaffleController')->names('waffles');                                     
-Route::resource('compras', 'CompraController')->names('compras');
+// Route::resource('compras', 'CompraController')->names('compras');
 Route::resource('ventas', 'VentaController')->names('ventas');
 
 Route::get('change_status/ventas/{venta}', 'VentaController@change_status')->name('change.status.ventas');
