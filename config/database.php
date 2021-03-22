@@ -2,12 +2,6 @@
 
 use Illuminate\Support\Str;
 
-$url = parse_url(getenv("CLEARDB_DATABASE_URL"));
-
-$host = $url["us-cdbr-east-03.cleardb.com"];
-$username = $url["ba4c4b929bab17"];
-$password = $url["c837e855"];
-$database = substr($url["heroku_6bcc1c6cb30b5c2"], 1);
 
 return [
 
@@ -22,7 +16,7 @@ return [
     |
     */
 
-    'default' => env('DB_CONNECTION', 'your_heroku_mysql_connection'),
+    'default' => env('DB_CONNECTION', 'mysql'),
 
     /*
     |--------------------------------------------------------------------------
@@ -69,17 +63,6 @@ return [
                 PDO::MYSQL_ATTR_SSL_CA => env('MYSQL_ATTR_SSL_CA'),
             ]) : [],
         ],
-        'your_heroku_mysql_connection' => array(
-            'driver' => 'mysql',
-            'host' => $host,
-            'database' => $database,
-            'username' => $username,
-            'password' => $password,
-            'charset' => 'utf8',
-            'collation' => 'utf8_unicode_ci',
-            'prefix' => '',
-        ),
-
         'pgsql' => [
             'driver' => 'pgsql',
             'url' => env('DATABASE_URL'),
