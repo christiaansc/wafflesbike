@@ -34,12 +34,17 @@ return [
     |
     */
 
-    'channels' => [
-        'stack' => [
-            'driver' => 'stack',
-            'channels' => ['single'],
-            'ignore_exceptions' => false,
-        ],
+
+        'channels' => [
+            'stack' => [
+                'driver' => 'stack',
+                'channels' => ['single'],
+            ],
+            'single' => [
+                'driver' => 'errorlog',
+                'level' => 'debug',
+            ],
+        
 
         'single' => [
             'driver' => 'single',
